@@ -5,6 +5,9 @@ import sys
 import numpy
 from sklearn.linear_model import LinearRegression
 from flask import Flask
+from flask import request
+from flask import jsonify
+import json
 
 
 def create_app(test_config=None):
@@ -29,8 +32,12 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/hello')
+    @app.route('/hello', methods=['POST'])
     def hello():
+        jsdata = request.get_json()
+        print(jsdata)
+        return jsonify(jsdata)
+        # print(data)
         #
         # loaded_model = pickle.load(open('saved_lin_reg.sav', 'rb'))
         # result = loaded_model.predict('input')
