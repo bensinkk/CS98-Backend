@@ -22,7 +22,7 @@ app.get('/test', async (req, res) => {
 			view: 0
 		}
 
-		const response = await axios.post('http://127.0.0.1:5000/hello', hardcodedData)
+		const response = await axios.post('https://cs98-ml.herokuapp.com/hello', hardcodedData)
 		console.log(response)
 		res.send(JSON.stringify(response.data))
 	} catch (error) {
