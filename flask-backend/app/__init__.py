@@ -1,4 +1,9 @@
 import os
+import pickle
+import pandas as pd
+import sys
+import numpy
+from sklearn.linear_model import LinearRegression
 from flask import Flask
 
 
@@ -26,7 +31,14 @@ def create_app(test_config=None):
     # a simple page that says hello
     @app.route('/hello')
     def hello():
-        print("yay")
+        #
+        # loaded_model = pickle.load(open('saved_lin_reg.sav', 'rb'))
+        # result = loaded_model.predict('input')
+
+        # the following fields should come
+        #'bedrooms', 'bathrooms', 'sqft_living',
+        #'sqft_lot', 'floors', 'zipcode', 'waterfront', 'view'
+    
         return {"test": 'Hello, World!'}
 
     return app
