@@ -37,7 +37,7 @@ def create_app(test_config=None):
         jsdata = request.get_json()
         print(jsdata)
         return jsonify(jsdata)
-        # print(data)
+        
         #
         # loaded_model = pickle.load(open('saved_lin_reg.sav', 'rb'))
         # result = loaded_model.predict('input')
@@ -45,7 +45,7 @@ def create_app(test_config=None):
         # the following fields should come
         #'bedrooms', 'bathrooms', 'sqft_living',
         #'sqft_lot', 'floors', 'zipcode', 'waterfront', 'view'
-    
+
         return {"test": 'Hello, World!'}
 
     return app
