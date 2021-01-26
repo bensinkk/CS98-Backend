@@ -11,6 +11,26 @@ app.use(cors())
 
 app.get('/test', async (req, res) => {
 	try {
+		const {
+			bedroom,
+			bathroom,
+			sqft_living,
+			sqft_lot,
+			floor,
+			zipcode,
+			waterfront,
+			view
+		} = req.body;
+		const actualData = {
+			bedroom,
+			bathroom,
+			sqft_living,
+			sqft_lot,
+			floor,
+			zipcode,
+			waterfront,
+			view
+		}
 		const hardcodedData = {
 			bedroom: 3,
 			bathroom: 1,
@@ -22,7 +42,9 @@ app.get('/test', async (req, res) => {
 			view: 0
 		}
 
-		const response = await axios.post('https://cs98-ml.herokuapp.com/hello', hardcodedData)
+		const response = await axios.post(
+									'https://cs98-ml.herokuapp.com/hello',
+									actualData);
 		console.log(response)
 		res.send(JSON.stringify(response.data))
 	} catch (error) {
