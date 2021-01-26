@@ -11,6 +11,7 @@ app.use(cors())
 
 app.get('/test', async (req, res) => {
 	try {
+		console.log("hallo")
 		const {
 			bedroom,
 			bathroom,
@@ -30,7 +31,7 @@ app.get('/test', async (req, res) => {
 			zipcode,
 			waterfront,
 			view
-		}
+		};
 		const hardcodedData = {
 			bedroom: 3,
 			bathroom: 1,
@@ -40,7 +41,7 @@ app.get('/test', async (req, res) => {
 			zipcode: "03755",
 			waterfront: 0,
 			view: 0
-		}
+		};
 
 		const response = await axios.post(
 									'https://cs98-ml.herokuapp.com/hello',
