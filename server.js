@@ -22,7 +22,6 @@ app.get('/test', async (req, res) => {
 			sqft_living,
 			sqft_lot,
 			floor,
-			zipcode,
 			waterfront,
 			view
 		} = req.body;
@@ -32,7 +31,6 @@ app.get('/test', async (req, res) => {
 			sqft_living,
 			sqft_lot,
 			floor,
-			zipcode,
 			waterfront,
 			view
 		};
@@ -42,7 +40,6 @@ app.get('/test', async (req, res) => {
 			sqft_living: 1180,
 			sqft_lot: 5650,
 			floor: 1,
-			zipcode: "03755",
 			waterfront: 0,
 			view: 0
 		};
