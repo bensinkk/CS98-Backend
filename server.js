@@ -17,34 +17,24 @@ app.get('/test', async (req, res) => {
 	try {
 		console.log(req.body)
 		const {
-			bedroom,
-			bathroom,
+			bedrooms,
+			bathrooms,
 			sqft_living,
 			sqft_lot,
-			floor,
-			zipcode,
+			floors,
 			waterfront,
+			yr_built,
 			view
 		} = req.body;
 		const actualData = {
-			bedroom,
-			bathroom,
+			bedrooms,
+			bathrooms,
 			sqft_living,
 			sqft_lot,
-			floor,
-			zipcode,
+			floors,
 			waterfront,
+			yr_built,
 			view
-		};
-		const hardcodedData = {
-			bedroom: 3,
-			bathroom: 1,
-			sqft_living: 1180,
-			sqft_lot: 5650,
-			floor: 1,
-			zipcode: "03755",
-			waterfront: 0,
-			view: 0
 		};
 
 		const response = await axios.post(
