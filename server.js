@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-app.get('/test', async (req, res) => {
+app.post('/test', async (req, res) => {
 	try {
 		console.log(req.body)
 		const {
